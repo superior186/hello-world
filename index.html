@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Todo</h1>
+      <p class="subtitle">管理你的每一天</p>
+    </header>
+
+    <div class="input-area">
+      <input type="text" id="todoInput" placeholder="添加新任务..." autocomplete="off">
+      <button id="addBtn" aria-label="添加任务">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="active">待完成</button>
+      <button class="filter-btn" data-filter="completed">已完成</button>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <footer class="footer" id="footer">
+      <span id="counter">0 个任务</span>
+      <button id="clearCompleted" class="clear-btn">清除已完成</button>
+    </footer>
+
+    <div class="empty-state" id="emptyState">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+        <path d="M2 17l10 5 10-5"></path>
+        <path d="M2 12l10 5 10-5"></path>
+      </svg>
+      <p>暂无任务，开始添加吧</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
