@@ -132,7 +132,7 @@ body {
 .filter-btn.active {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: #ffff;
 }
 
 /* ---- Todo List ---- */
